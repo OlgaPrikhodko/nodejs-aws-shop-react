@@ -4,27 +4,16 @@ This project automates the deployment of the **AWS-Shop** application using **AW
 
 ---
 
+## 🔥 Task 3 Outputs:
+
+**ProductService** production link was added:
+[ProductServiceLink](https://6krhhlmu2l.execute-api.eu-west-1.amazonaws.com/prod)
+
+---
+
 ## 🔥 Task 2 Outputs:
 
-### 1️⃣ **Build and Manually Upload the AWS-Shop App**
-
-After building the application, the files were manually uploaded to the created **S3 bucket**.
-
-🔗 **S3 Bucket URL:**  
-[http://app-bucket-task-2.s3-website-eu-west-1.amazonaws.com/](http://app-bucket-task-2.s3-website-eu-west-1.amazonaws.com/)
-
----
-
-### 2️⃣ **CloudFront Distribution**
-
-CloudFront was configured to serve content globally with caching enabled.
-
-🔗 **CloudFront Distribution URL:**  
-[https://d1y2j3pqes5nz5.cloudfront.net](https://d1y2j3pqes5nz5.cloudfront.net)
-
----
-
-### 3️⃣ **Links After Automated Deployment**
+### **Links After Automated Deployment**
 
 After setting up an **automated deployment pipeline** using **AWS CDK**, the resources were updated.
 
