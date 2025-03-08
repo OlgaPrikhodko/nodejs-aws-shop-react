@@ -2,6 +2,11 @@
 
 This project automates the deployment of the **AWS-Shop** application using **AWS CDK**. It sets up an **S3 Bucket** for website hosting and a **CloudFront Distribution** for caching and global delivery.
 
+Task 5 Outputs:
+
+**ImportService** production link
+[ImportServiceLink](https://hr83sjmjyj.execute-api.eu-west-1.amazonaws.com/prod/)
+
 ---
 
 ## 🔥 Task 3 Outputs:
