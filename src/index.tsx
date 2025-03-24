@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { theme } from "~/theme";
+import axios from "axios";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -18,6 +19,22 @@ if (import.meta.env.DEV) {
   const { worker } = await import("./mocks/browser");
   worker.start({ onUnhandledRequest: "bypass" });
 }
+
+// Global Axios response interceptor for 401 & 403 alerts
+axios.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    const status = error?.response?.status;
+
+    if (status === 401) {
+      alert("Unauthorized: Please log in.");
+    } else if (status === 403) {
+      alert("Forbidden: You do not have access.");
+    }
+
+    return Promise.reject(error);
+  }
+);
 
 const container = document.getElementById("app");
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
